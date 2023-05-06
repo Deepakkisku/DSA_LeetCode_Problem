@@ -44,6 +44,9 @@ class Solution {
         if(n == 0 || n == 1){
             return n;
         }
+        if(dp[n] != 0){
+            return dp[n];
+        }
         int fib1 = fibmemo(n - 1, dp);
         int fib2 = fibmemo(n - 2, dp);
         int fibn = fib1 + fib2;
